@@ -1,9 +1,8 @@
 import { useState } from "react";
 import type { CommentType, CommentMap } from "../types/comment";
-import commentsData from "../CommentData.json";
+import { commentsData } from "../commentData";
 
-export function useComment() {
-    const initialComments: CommentMap = commentsData.comment;
+export function useComment(initialComments: CommentMap = commentsData) {
   const [comments, setComments] = useState<CommentMap>(initialComments);
 
   /** Add a new comment */
