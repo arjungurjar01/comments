@@ -60,7 +60,7 @@ export function useComment(initialComments: CommentMap = commentsData.comment) {
   };
 
   /** Get only root-level comments */
-  const rootComments = Object.values(comments).filter(
+  const rootComments : CommentType[] = Object.values(comments).filter(
     (c) => c.parentId === null
   ).sort((a, b) => b.id - a.id);;
 
