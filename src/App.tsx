@@ -6,7 +6,7 @@ function App() {
   const { rootComments, comments, addComment, deleteComment } = useComment();
 
   return (
-    <div className="space-y-6 p-6 max-w-2xl mx-auto">
+    <div className="space-y-6 px-6 pt-8 md:p-6 max-w-2xl mx-auto">
       <CommentSection
         rootComments={rootComments}
         allComments={comments}

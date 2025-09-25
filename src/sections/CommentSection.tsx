@@ -13,7 +13,7 @@ type CommentSectionProps = {
 
 function CommentSection({rootComments,allComments,addComment,deleteComment}:CommentSectionProps) {
   return (
-    <div className="w-[80%] bg-white h-full">
+    <div className="w-84 md:w-[80%] lg:w-[100%] bg-white h-full">
          <div className="flex flex-col items-center p-4">
            <div className="w-full">
           <Input addComment={addComment} parentId={null} placeholder="write a comment..."/>
@@ -22,7 +22,7 @@ function CommentSection({rootComments,allComments,addComment,deleteComment}:Comm
 
          {rootComments.length > 0 ? (
         rootComments.map((comment) => (
-          <div key={comment.id} className="w-full px-4 pt-4">
+          <div key={comment.id} className="w-full px-2 pt-2">
             <Comment
               comment={comment}
               allComments={allComments}
